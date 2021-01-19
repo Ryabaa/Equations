@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section">
+        <div class="card">
+            <p class="equation">
+                <input type="text" class="input input-1">
+                x²
+                <span class="operator-1">+</span>
+                <input type="text" class="input input-2">
+                x
+                <span class="operator-2">+</span>
+                <input type="text" class="input input-3">
+                = 0
+            </p>
+            <input type="button" value="Solve" class="button" onclick="solution()">
+        </div>
+        <div class="solution">
+            <h1>Solution</h1>
+            <hr>
+            <p class="equation-solution solution-hide">
+                <span class="unknown-1"></span>x²+
+                <span class="unknown-2"></span>x+
+                <span class="unknown-3"></span>=0
+            </p>
+            <br>
+            <p class="solution-hide discriminant">D=b²-4ac= <span class="discriminant-solution"></span></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

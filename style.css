@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: #2a4a63;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.section {
+    height: max-content;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 50px;
+    height: 400px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.card {
+    width: 420px;
+    height: 200px;
+    background: #3f8efc;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.equation {
+    color: #add7f6;
+    font-size: 50px;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    width: 310px;
+    align-items: center;
+}
+
+.input {
+    width: 20px;
+    border: none;
+    height: 30px;
+    margin-bottom: 15px;
+    background: #add7f6;
+    text-align: end;
+    color: #4331c9;
+    font-size: 30px;
+}
+
+.button {
+    width: 170px;
+    height: 45px;
+    border-radius: 20px;
+    background: #4331c9;
+    color: #e7e7e7;
+    align-self: start;
+    font-weight: 600;
+    font-family: arial;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #2b1d94;
+}
+
+.solution {
+    background: #9afc3f;
+    height: 300px;
+    width: 420px;
+    border-radius: 0 0 10px 10px;
+    font-size: 20px;
+}
+
+.solution-hide {
+    display: none;
+}
