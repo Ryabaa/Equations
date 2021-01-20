@@ -44,14 +44,13 @@ function solve() {
     let a = input_1.value;
     let b = input_2.value;
     let c = input_3.value;
-    
-    
-    
+   
     let discr = b*b - 4*a*c;
+    let discrSqrt = Math.sqrt(discr);
     
     if(discr > 0) {
-        let root_1 = (-b - (Math.sqrt(discr))) / (2*a);
-        let root_2 = (-b + (Math.sqrt(discr))) / (2*a);
+        let root_1 = (-b - discrSqrt) / (2*a);
+        let root_2 = (-b + discrSqrt) / (2*a);
         rootThird.style.display = "none";
         solutionEquation.style.display = "flex";
         coefficients.style.display = "flex";
