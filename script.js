@@ -21,8 +21,8 @@ function solve() {
     let discrSoluton = b + '²' + '-' + '4' + '·' + a + '·' + c + '=' + b*b + '-' + 4*a*c + '=' + discr;
     discriminantSolution.textContent = discrSoluton;
     if(discr > 0) {
-        let root_1 = (-b - discriminant) / (2*a);
-        let root_2 = (-b + discriminant) / (2*a);
+        let root_1 = (-b - discr) / (2*a);
+        let root_2 = (-b + discr) / (2*a);
     } else if(discr === 0){
         let root_1 = -b / (2*a);
     } else {
