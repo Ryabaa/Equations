@@ -9,7 +9,7 @@
 <body>
     <div class="section">
         <div class="card">
-            <p class="equation">
+            <div class="equation">
                 <input type="text" class="input input-1">
                 x²
                 <span class="operator-1">+</span>
@@ -18,22 +18,69 @@
                 <span class="operator-2">+</span>
                 <input type="text" class="input input-3">
                 = 0
-            </p>
-            <input type="button" value="Solve" class="button" onclick="solution()">
+            </div>
+            <input type="button" value="Solve" class="button" onclick="solve()">
         </div>
         <div class="solution">
-            <h1>Solution</h1>
-            <hr>
-            <p class="equation-solution solution-hide">
-                <span class="unknown-1"></span>x²+
-                <span class="unknown-2"></span>x+
-                <span class="unknown-3"></span>=0
+            <h1 class="solution-title">Solution</h1>
+            <p class="a-zero"></p>
+            <p class="solution-equation">
+                <span class="unknown-1"></span>x² + 
+                <span class="unknown-2"></span>x + 
+                <span class="unknown-3"></span> = 0
             </p>
+            <p class="coefficients">a = <span class="coefficient-a green"></span>, b = <span class="coefficient-b green"></span>, c = <span class="coefficient-c green"></span></p>
+            <p class="solution-discriminant">D = b² - 4ac = <span class="discriminant"></span></p>
+            <div class="root root-margin root-1">
+                x₁ = 
+                <div class="root-card">
+                    <span>-b + √D</span>
+                    <div class="line"></div>
+                    <span>2a</span>
+                </div>
+                =  
+                <div class="root-card">
+                    <span class="top-1"></span>
+                    <div class="line"></div>
+                    <span class="bottom-1"></span>
+                </div>
+                = 
+                <span class="answer-1 green"></span>
+            </div>
             <br>
-            <p class="solution-hide discriminant">D=b²-4ac= <span class="discriminant-solution"></span></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <div class="root root-2">
+                x₂ = 
+                <div class="root-card">
+                    <span>-b - √D</span>
+                    <div class="line"></div>
+                    <span>2a</span>
+                </div>
+                =
+                <div class="root-card">
+                    <span class="top-2"></span>
+                    <div class="line"></div>
+                    <span class="bottom-2"></span>
+                </div>
+                =
+                <span class="answer-2 green"></span>
+            </div>
+            <div class="root root-margin root-3">
+                x = 
+                <div class="root-card">
+                    <span>-b</span>
+                    <div class="line"></div>
+                    <span>2a</span>
+                </div>
+                =  
+                <div class="root-card">
+                    <span class="top-3"></span>
+                    <div class="line"></div>
+                    <span class="bottom-3"></span>
+                </div>
+                = 
+                <span class="answer-3 green"></span>
+            </div>
+            <p class="no-roots"></p>
         </div>
     </div>
     <script src="script.js"></script>
