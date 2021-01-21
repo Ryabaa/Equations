@@ -61,8 +61,8 @@ function solve() {
         aZero.style.display = "none";
         answer_1.textContent = root_1;
         answer_2.textContent = root_2;
-        top_1.textContent = -b + ' - ' + '√' + discr;
-        top_2.textContent = -b + ' + ' + '√' + discr;
+        top_1.textContent = -b + ' + ' + '√' + discr;
+        top_2.textContent = -b + ' - ' + '√' + discr;
         bottom_1.textContent = 2 + ' · ' + a;
         bottom_2.textContent = 2 + ' · ' + a;
     } else if(discr == 0){
