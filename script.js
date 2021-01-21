@@ -49,8 +49,8 @@ function solve() {
     let discrSqrt = Math.sqrt(discr);
     
     if(discr > 0) {
-        let root_1 = (-b + discrSqrt) / (2*a);
-        let root_2 = (-b - discrSqrt) / (2*a);
+        let root_1 = (-b + (discrSqrt)) / (2*a);
+        let root_2 = (-b - (discrSqrt)) / (2*a);
         rootThird.style.display = "none";
         solutionEquation.style.display = "flex";
         coefficients.style.display = "flex";
