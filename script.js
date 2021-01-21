@@ -39,19 +39,17 @@ let rootSecond = document.querySelector(".root-2");
 let rootThird = document.querySelector(".root-3");
 let noRoots = document.querySelector(".no-roots");
 
-
 function solve() {
     let a = input_1.value;
     let b = input_2.value;
     let c = input_3.value;
-    
-    
     
     let discr = b*b - 4*a*c;
     
     if(discr > 0) {
         let root_1 = (-b - discr) / (2*a);
         let root_2 = (-b + discr) / (2*a);
+
         rootThird.style.display = "none";
         solutionEquation.style.display = "flex";
         coefficients.style.display = "flex";
@@ -126,5 +124,4 @@ function solve() {
     coefficient_a.textContent = a;
     coefficient_b.textContent = b;
     coefficient_c.textContent = c;
-
 }
