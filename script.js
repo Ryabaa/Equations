@@ -59,8 +59,8 @@ function solve() {
         rootSecond.style.display = "flex";
         noRoots.style.display = "none";
         aZero.style.display = "none";
-        answer_1.textContent = root_1;
-        answer_2.textContent = root_2;
+        answer_1.textContent = root_2;
+        answer_2.textContent = root_1;
         top_1.textContent = -b + ' + ' + '√' + discr;
         top_2.textContent = -b + ' - ' + '√' + discr;
         bottom_1.textContent = 2 + ' · ' + a;
