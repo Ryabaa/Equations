@@ -114,10 +114,6 @@ function visualCoeffZero() {
     aZero.textContent = 'Coefficient "a" cannot be equal to zero';
 }
 
-let a = null;
-let b = null;
-let c = null;
-
 function getInputs(i1, i2, i3) {
     a = i1.value;
     b = i2.value;
@@ -130,10 +126,8 @@ function getInputs(i1, i2, i3) {
         b = 1;
     }
     if (c === '') {
-        c = 1;
+        c = 0;
     }
-    
-    return [a, b, c];
 }
 
 function solCoeffs_Unknowns(u1, u2, u3, coeff1, coeff2, coeff3) {
@@ -155,6 +149,9 @@ function calcSqrtDiscr(d) {
 
 
 function main() {
+    let a = null;
+    let b = null;
+    let c = null;
     getInputs(input_1, input_2, input_3);
     let discr = calcDiscr(a, b, c);
     sqrtDiscr = calcSqrtDiscr(discr);
