@@ -156,7 +156,7 @@ function main() {
     let c = null;
     getInputs(input_1, input_2, input_3);
     let discr = calcDiscr(a, b, c);
-    sqrtDiscr = calcSqrtDiscr(discr);
+    let sqrtDiscr = calcSqrtDiscr(discr);
     
     function getTwoRoots(a, b, d) {
         let root_1 = (-b + d) / (2 * a);
