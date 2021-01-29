@@ -128,6 +128,8 @@ function getInputs(i1, i2, i3) {
     if (c === '') {
         c = 0;
     }
+
+    return {a, b, c};
 }
 
 function solCoeffs_Unknowns(u1, u2, u3, coeff1, coeff2, coeff3) {
