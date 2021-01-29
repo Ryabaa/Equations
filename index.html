@@ -10,16 +10,16 @@
     <div class="section">
         <div class="card">
             <div class="equation">
-                <input type="text" class="input input-1">
+                <input type="number" class="input input-1">
                 x²
                 <span class="operator-1">+</span>
-                <input type="text" class="input input-2">
+                <input type="number" class="input input-2">
                 x
                 <span class="operator-2">+</span>
-                <input type="text" class="input input-3">
+                <input type="number" class="input input-3">
                 = 0
             </div>
-            <input type="button" value="Solve" class="button" onclick="solve()">
+            <input type="button" value="Solve" class="button">
         </div>
         <div class="solution">
             <h1 class="solution-title">Solution</h1>
@@ -30,7 +30,7 @@
                 <span class="unknown-3"></span> = 0
             </p>
             <p class="coefficients">a = <span class="coefficient-a green"></span>, b = <span class="coefficient-b green"></span>, c = <span class="coefficient-c green"></span></p>
-            <p class="solution-discriminant">D = b² - 4ac = <span class="discriminant"></span></p>
+            <p class="solution-discriminant">D = b² - 4ac = <span class="discriminant"></span><span class="discriminant-result"></span></p>
             <div class="root root-margin root-1">
                 x₁ = 
                 <div class="root-card">
@@ -43,6 +43,12 @@
                     <span class="top-1"></span>
                     <div class="line"></div>
                     <span class="bottom-1"></span>
+                </div>
+                =
+                <div class="root-card">
+                    <span class="top2-1"></span>
+                    <div class="line"></div>
+                    <span class="bottom2-1"></span>
                 </div>
                 = 
                 <span class="answer-1 green"></span>
@@ -62,6 +68,12 @@
                     <span class="bottom-2"></span>
                 </div>
                 =
+                <div class="root-card">
+                    <span class="top2-2"></span>
+                    <div class="line"></div>
+                    <span class="bottom2-2"></span>
+                </div>
+                =
                 <span class="answer-2 green"></span>
             </div>
             <div class="root root-margin root-3">
@@ -78,6 +90,12 @@
                     <span class="bottom-3"></span>
                 </div>
                 = 
+                <div class="root-card">
+                    <span class="top2-3"></span>
+                    <div class="line"></div>
+                    <span class="bottom2-3"></span>
+                </div>
+                =
                 <span class="answer-3 green"></span>
             </div>
             <p class="no-roots"></p>

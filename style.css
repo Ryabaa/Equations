@@ -1,6 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
 * {
     margin: 0;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Roboto;
     box-sizing: border-box;
 }
 
@@ -19,20 +21,20 @@ input {
     height: min-content;
     display: grid;
     grid-template-rows: repeat(2, auto);
-    row-gap: 30px;
-    height: 400px;
+    row-gap: 20px;
     width: 70%;
     margin: auto;
+    padding: 50px 0;
 }
 
 .card {
     width: 100%;
     height: 200px;
-    background: #3f8efc;
+    background: #1f6cd6;
     display: grid;
     justify-items: center;
     align-items: center;
-    border-radius: 10px 10px 0 0;
+    box-shadow: #1a2533 10px 10px 20px;
 }
 
 .equation {
@@ -41,42 +43,51 @@ input {
 }
 
 .input {
-    width: 30px;
+    width: 50px;
     border: none;
-    max-height: 30px;
+    height: 40px;
     background: #add7f6;
     text-align: end;
-    color: #4331c9;
-    font-size: 25px;
+    color: #236b12;
+    font-weight: 600;
+    font-family: cursive;
+    font-size: 35px;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .button {
     width: 170px;
     height: 45px;
     border-radius: 20px;
-    background: #4331c9;
-    color: #e7e7e7;
+    background: #dacc14;
+    color: #424242;
     align-self: start;
     font-weight: 600;
-    font-family: arial;
-    font-size: 20px;
+    font-family: cursive;
+    font-size: 23px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
 .button:hover {
-    background: #2b1d94;
+    background: #f3ff47;
 }
 
 .solution {
     background: #dacc14;
     height: max-content;
     width: 100%;
-    border-radius: 0 0 10px 10px;
     font-size: 30px;
     padding: 20px 5px 20px 20px;
     color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
     display: none;
+    box-shadow: #1a2533 10px 10px 20px;
 }
 
 .solution-title {
@@ -85,20 +96,30 @@ input {
     margin: 10px 0 30px;
 }
 
+.coefficients {
+    white-space: pre-wrap;
+}
+
 .root-margin {
     margin-top: 30px;
+}
+
+.discriminant {
+    white-space: pre-wrap;
 }
 
 .root {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: max-content;
 }
 
 .root-card {
     display: grid;
     grid-template-rows: 1fr auto 1fr;
     justify-items: center;
+    white-space: pre-wrap;
 }
 
 .line {
@@ -109,9 +130,11 @@ input {
 
 .green {
     color: #236b12;
+    font-family: cursive;
+    font-weight: 600;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 730px) {
     .section {
         width: 80%;
     }
@@ -130,10 +153,17 @@ input {
     }
 }
 
+@media (max-width: 400px) {
+    .solution {
+        font-size: 15px;
+    }
+}
+
 .a-zero {
     color: rgb(150, 22, 22);
 }
 
 .root-3 {
     display: none;
+    white-space: pre-wrap;
 }
