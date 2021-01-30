@@ -70,7 +70,6 @@ function visualTwoRoots(a, b, root_1, root_2, d, sd) {
 }
 
 function visualOneRoot(a, b, c, root_3, d) {
-    minus(a, b, c);
     answer_3.textContent = root_3;
     solutionEquation.style.display = "flex";
     coefficients.style.display = "flex";
@@ -118,7 +117,6 @@ function getInputs(i1, i2, i3) {
     a = i1.value;
     b = i2.value;
     c = i3.value;
-    
     if (a === '') {
         a = 1;
     }
@@ -128,7 +126,6 @@ function getInputs(i1, i2, i3) {
     if (c === '') {
         c = 0;
     }
-
     return {a, b, c};
 }
 
@@ -149,34 +146,33 @@ function calcSqrtDiscr(d) {
     return Math.sqrt(d);
 }
 
+function getTwoRoots(a, b, d) {
+    let root_1 = (-b + d) / (2 * a);
+    let root_2 = (-b - d) / (2 * a);
+    root_1 = Math.round(root_1 * 100) / 100;
+    root_2 = Math.round(root_2 * 100) / 100;
+    return {root_1, root_2};
+}
+
+function getOneRoot(a, b) {
+    let root_3 = -b / (2 * a); 
+    root_3 = Math.round(root_3 * 100) / 100;
+    return {root_3};
+}
 
 function main() {
     getInputs(input_1, input_2, input_3);
     let discr = calcDiscr(a, b, c);
     let sqrtDiscr = calcSqrtDiscr(discr);
-    
-    function getTwoRoots(a, b, d) {
-        let root_1 = (-b + d) / (2 * a);
-        let root_2 = (-b - d) / (2 * a);
-        root_1 = Math.round(root_1 * 100) / 100;
-        root_2 = Math.round(root_2 * 100) / 100;
-        visualTwoRoots(a, b, root_1, root_2, discr, sqrtDiscr);
-        return [root_1, root_2];
-    }
-    
-    function getOneRoot(a, b) {
-        let root_3 = -b / (2 * a); 
-        root_3 = Math.round(root_3 * 100) / 100;
-        visualOneRoot(a, b, root_3, discr, sqrtDiscr);
-        return root_3;
-    }
+    let twoRoots = getTwoRoots(a, b, sqrtDiscr);
+    let oneRoot = getOneRoot(a, b);
     
     if (discr > 0) {
         solCoeffs_Unknowns(unknown_1, unknown_2, unknown_3, coefficient_a, coefficient_b, coefficient_c);
-        getTwoRoots(a, b, sqrtDiscr);
+        visualTwoRoots(a, b, twoRoots.root_1, twoRoots.root_2, discr, sqrtDiscr);
     } else if (discr == 0) {
         solCoeffs_Unknowns(unknown_1, unknown_2, unknown_3, coefficient_a, coefficient_b, coefficient_c);
-        getOneRoot(a, b);
+        visualOneRoot(a, b, oneRoot.root_3, discr, sqrtDiscr);
     } else {
         solCoeffs_Unknowns(unknown_1, unknown_2, unknown_3, coefficient_a, coefficient_b, coefficient_c);
         visualNoRoots(discr);
@@ -185,9 +181,7 @@ function main() {
     if (a == 0) {
         visualCoeffZero();
     }
-    
 }
-
 
 button.addEventListener('click', function() {
     solution.style.display = "flex";

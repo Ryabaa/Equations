@@ -141,7 +141,9 @@ input {
 }
 
 @media (max-width: 730px) {
-    .button {
+    .button,
+    .input,
+    .green {
         font-family: Roboto;
     }
     .section {
