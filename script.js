@@ -151,9 +151,6 @@ function calcSqrtDiscr(d) {
 
 
 function main() {
-    let a = null;
-    let b = null;
-    let c = null;
     getInputs(input_1, input_2, input_3);
     let discr = calcDiscr(a, b, c);
     let sqrtDiscr = calcSqrtDiscr(discr);
